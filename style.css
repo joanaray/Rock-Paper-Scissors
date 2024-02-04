@@ -1,0 +1,109 @@
+:root {
+  --color-dark: hsl(120, 82%, 2%);
+  --color-red: hsl(8, 71%, 51%);
+  --font-main: "Josefin Sans", Arial, Helvetica, sans-serif;
+  --footer-height: 74px;
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  font-family: var(--font-main);
+  background-color: var(--color-dark);
+  color: var(--color-red);
+  padding: 0;
+  margin: 0;
+  font-size: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+*,
+*::before,
+*::after {
+  position: relative;
+  box-sizing: border-box;
+}
+a {
+  color: var(--color-red);
+}
+a:hover {
+  color: hsl(8, 71%, 71%);
+}
+header,
+main,
+footer {
+  width: 100%;
+  padding: 4rem;
+}
+main {
+  flex-grow: 1;
+  padding-bottom: var(--footer-height);
+}
+footer {
+  border-top: 1px solid var(--color-red);
+  position: absolute;
+  bottom: 0;
+  font-size: small;
+  text-transform: uppercase;
+  text-align: right;
+  padding-block: 1rem;
+}
+
+main section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+.messages {
+  display: block;
+  text-align: center;
+}
+#results {
+  max-width: 480px;
+  margin-inline: auto;
+  margin-top: 2rem;
+  align-items: baseline;
+  gap: 1rem;
+}
+#results div:not(:nth-child(2)) {
+  width: calc(100% / 3);
+  text-align: center;
+}
+#results p {
+  text-transform: capitalize;
+}
+header {
+  border-bottom: 1px solid var(--color-red);
+  padding-bottom: 1rem;
+}
+hgroup,
+h2 {
+  text-align: center;
+}
+h1 {
+  font-size: 2em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+button {
+  font-family: var(--font-main);
+  font-weight: 700;
+  font-size: 1.2em;
+  background: var(--color-red);
+  color: var(--color-dark);
+  border: 2px solid var(--color-red);
+  padding: 1em 2em;
+  border-radius: 0.4em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+button:hover {
+  background-color: var(--color-dark);
+  color: var(--color-red);
+}
+#announcement {
+  font-size: 2em;
+  text-transform: uppercase;
+  text-align: center;
+}
